@@ -30,16 +30,20 @@ class IEnhancedUserDataSchema(IUserDataSchema):
     """ Use all the fields from the default user data schema, and add various
     extra fields.
     """
-    country = schema.TextLine(
-        title=_(u'label_country', default=u'Country'),
-        description=_(u'help_country',
-                      default=u"Fill in which country you live in."),
+    blogName = schema.TextLine(
+        title=_(u'label_blogName', default=u'Blog name'),
+        default=_(u"My funlog space"),
+        required=True,
+    )
+
+    blogDescription = schema.Text(
+        title=_(u'label_description', default=u'Blog description'),
         required=False,
     )
 
-    detail = schema.Text(
-        title=_(u'label_detail', default=u'Detail'),
-        description=_(u'help_detail',
-                      default=u"Detail description for member."),
+    blogOnOff = schema.Bool(
+        title=_(u'label_description', default=u'Blog siwtch.'),
+        description=_(u'Funlog switch turn on/off'),
+        default=True,
         required=False,
     )
