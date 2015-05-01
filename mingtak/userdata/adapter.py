@@ -4,20 +4,14 @@ from Products.CMFPlone.utils import safe_unicode
 class EnhancedUserDataPanelAdapter(UserDataPanelAdapter):
     """
     """
-    def get_blogName(self):
-        return self.context.getProperty('blogName', '')
-    def set_blogName(self, value):
-        return self.context.setMemberProperties({'blogName': value})
-    blogName = property(get_blogName, set_blogName)
+    def get_institution(self):
+        return self.context.getProperty('institution', '')
+    def set_institution(self, value):
+        return self.context.setMemberProperties({'institution': value})
+    institution = property(get_institution, set_institution)
 
-    def get_blogDescription(self):
-        return self.context.getProperty('blogDescription', '')
-    def set_blogDescription(self, value):
-        return self.context.setMemberProperties({'blogDescription': value})
-    blogDescription = property(get_blogDescription, set_blogDescription)
-
-    def get_blogOnOff(self):
-        return self.context.getProperty('blogOnOff', '')
-    def set_blogOnOff(self, value):
-        return self.context.setMemberProperties({'blogOnOff': value})
-    blogOnOff = property(get_blogOnOff, set_blogOnOff)
+    def get_position(self):
+        return self.context.getProperty('position', '')
+    def set_position(self, value):
+        return self.context.setMemberProperties({'position': value})
+    position = property(get_position, set_position)

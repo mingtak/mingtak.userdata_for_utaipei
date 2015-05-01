@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <object name="portal_memberdata" meta_type="Plone Memberdata Tool">
- <property name="blogName" type="string">My funlog space</property>
- <property name="blogDescription" type="string"></property>
- <property name="blogOnOff" type="boolean">True</property>
+ <property name="institution" type="string"></property>
+ <property name="position" type="string"></property>
 </object>
